@@ -1,20 +1,17 @@
 <div class="container">
   <h1>Cocktails</h1>
-  <br>
-  <p>Add a new cocktail from here... coming soon</p>
-  <%#= render 'form' %>
-  <br>
-
-<!--  -->
+<!--   <p>Add a new cocktail from here... coming soon</p>
+ -->
   <div class="row">
 
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1490324120634-0fa86c62d6c1');">
           <div class="card-description">
             <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
           </div>
-        <a class="card-link" href="#" ></a>
+        <%= link_to "", cocktail_path(cocktail), class:"card-link" %>
+ <!--        <a class="card-link" href="#" ></a> -->
         </div>
       </div>
     <% end %>

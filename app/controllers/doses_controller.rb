@@ -2,6 +2,7 @@ class DosesController < ApplicationController
   before_action :set_cocktail
 
   def new
+    @ingredients = Ingredient.all - @cocktail.ingredients
     @dose = Dose.new
   end
 
